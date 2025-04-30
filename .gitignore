@@ -1,12 +1,11 @@
 # Template specific
-checkpoints/*
-data/*
-figures/figures/*
-figures/figure_data/*
-results/*
+
 
 ## general filetypes
 
+**.svg
+**.gz
+**.fastq.gz
 **.html
 **.utf8.md
 **.knit.md

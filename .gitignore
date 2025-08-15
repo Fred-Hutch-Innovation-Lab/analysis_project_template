@@ -3,22 +3,25 @@
 # Data files
 **.fastq.gz
 **.gz
-
-# Apptainer
-*.sif
-
-# Python
-## Jupyter lab
-*.ipynb
-
-## UV
-.venv/*
+**.h5
+**.h5ad
 
 # general filetypes
 **.svg
 **.html
 **.png
 **.pdf
+
+# Apptainer
+*.sif
+
+# Python
+## Jupyter lab
+.ipynb_checkpoints/
+
+## UV
+.venv/*
+
 
 # R
 *.Rproj

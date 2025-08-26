@@ -11,11 +11,15 @@
 **.html
 **.png
 **.pdf
+core
+*.sqlite
 
 # Apptainer
 *.sif
 
 # Python
+*.pkl
+
 ## Jupyter lab
 .ipynb_checkpoints/
 
@@ -80,3 +84,5 @@ rsconnect/
 
 # MAC
 .DS_Store
+
+/.quarto/

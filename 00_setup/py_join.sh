@@ -7,9 +7,10 @@ export UV_CACHE_DIR=/fh/fast/_IRC/FHIL/grp/bioinfo_tools/package_caches/uv
 if [ $# -gt 0 ]; then
   PROJECT_DIR=$1
 else
-  PROJECT_DIR=$(dirname "$PWD")
+  PROJECT_DIR=$(dirname "$(dirname "$(readlink -f "$0")")")
 fi
 PROJECT_NAME=$(basename "$PROJECT_DIR")
+
 export UV_PROJECT_ENVIRONMENT="$PROJECT_DIR/.venv"
 
 echo "🔧 Attaching to project: $PROJECT_NAME"

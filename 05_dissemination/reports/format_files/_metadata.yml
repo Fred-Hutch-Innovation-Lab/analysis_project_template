@@ -1,0 +1,23 @@
+date: last-modified
+date-format: "DD MMM YYYY"
+format:
+  html:
+    theme: litera
+    embed-resources: true
+    comments:
+      hypothesis: true
+    toc: true
+    toc-depth: 1
+    toc-expand: 2
+    number-depth: 1
+    number-sections: false
+    toc-title: Sections
+    code-fold: false
+    code-links: 
+      repo: 
+    link-external-newwindow: true
+execute:
+  warning: false
+  echo: false
+figures:
+  fig-dpi: 150

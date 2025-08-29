@@ -15,7 +15,7 @@ if [ ! -d ".venv" ]; then
     exit 1
 fi
 
-echo "📦 Installing common Python dependencies..."
+echo "Installing common Python dependencies..."
 
 # Common data science packages
 pypi_packages=(
@@ -30,15 +30,16 @@ pypi_packages=(
     "scanpy"
     "anndata"
     "leidenalg"
+    "pyprojroot"
 )
 
 # Install pypi packages
-echo "🔬 Installing pypi packages..."
+echo "Installing pypi packages..."
 for package in "${pypi_packages[@]}"; do
     if uv run python -c "import $package" 2>/dev/null; then
         echo "✅ $package already installed"
     else
-        echo "📥 Installing $package..."
+        echo "Installing $package..."
         if uv add "$package"; then
             echo "✅ $package successfully installed"
         else
@@ -47,7 +48,6 @@ for package in "${pypi_packages[@]}"; do
     fi
 done
 
-echo ""
 echo "✅ Common dependencies installation complete!"
 echo "📋 Next steps:"
 echo "   - Check installed packages: uv list"

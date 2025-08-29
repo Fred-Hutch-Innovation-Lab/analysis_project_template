@@ -18,13 +18,22 @@ cd "$PROJECT_DIR"
 # Initialize uv project if not already
 if [ ! -f "uv.lock" ]; then
     uv init --python=3.11 --bare
+    uv add ipykernel
+else
+    echo "✅ uv.lock already exists, syncing project..."
+    uv sync
 fi
 
-# Register kernel with Jupyter
-uv run python -m ipykernel install \
-  --name="proj-$PROJECT_NAME" \
-  --display-name="Python (project: $PROJECT_NAME)"
-  
-export 
+if jupyter kernelspec list | grep -q "proj-$PROJECT_NAME"; then
+    echo "✅ Jupyter kernel for project $PROJECT_NAME already exists."
+else
+  # Register kernel with Jupyter
+  uv run python -m ipykernel install \
+    --name="proj-$PROJECT_NAME" \
+    --sys-prefix \
+    --display-name="Python (project: $PROJECT_NAME)"
+fi
 
+
+  
 echo "✅ Project $PROJECT_NAME initialized with Jupyter kernel."

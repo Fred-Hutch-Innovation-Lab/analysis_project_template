@@ -1,0 +1,48 @@
+---
+title: "QC"
+jupyter: proj-analysis_project_template
+---
+
+
+```{python}
+import pickle
+from pyprojroot import here
+import spatialdata_plot
+import matplotlib.pyplot as plt
+```
+
+```{python}
+with open(here("05_dissemination/reports/object_stores/01_figures.pkl"), 'rb') as f:
+    figures = pickle.load(f)
+```
+
+# code-links
+
+
+
+## Markdown
+
+Markdown is an easy to read and write text format:
+
+- It's _plain text_ so works well with version control
+- It can be **rendered** into HTML, PDF, and more
+- Learn more at: <https://quarto.org/docs/authoring/>
+
+## Equation
+
+```{python}
+figures['transcript_overlay']
+```
+
+```{python}
+figures['cluster_umap']
+```
+
+```{python}
+figures['cluster_gridplot']
+```
+
+```{r}
+print('hello')
+```
+

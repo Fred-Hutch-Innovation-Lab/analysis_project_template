@@ -9,7 +9,6 @@ If you are starting the project for the first time, run the `00_setup/python_set
 00_setup                          # Scripts to run the first time you start, join, or clone a project
 | *<.def,.dockerfile>             # Compute environments defining system dependencies needed for packages
 │ py_setup.sh                     # Setup project-level python package management through UV
-│ py_join.sh                      # Use existing project .venv and package cache
 | py_install_common_deps.sh       # Quick startup for adding common Python packages to UV project
 │ r_setup.sh                      # Setup project-level R package manamenet with Renv
 │ r_join.sh                       # Use existing project library or public cache
